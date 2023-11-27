@@ -12,6 +12,7 @@ public class PhoneBookTest {
     public void testAdd() {
         PhoneBook phoneBook = new PhoneBook();
         Assertions.assertEquals(phoneBook.add(name1, number1), 1);
+        Assertions.assertEquals(phoneBook.add(name1, number1), 1);
         Assertions.assertEquals(phoneBook.add(name2, number2), 2);
     }
 }
