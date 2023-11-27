@@ -25,6 +25,7 @@ public class PhoneBook {
     }
 
     public boolean printAllNames(){
-        return false;
+        names.keySet().stream().sorted().forEach(System.out::println);
+        return true;
     }
 }
