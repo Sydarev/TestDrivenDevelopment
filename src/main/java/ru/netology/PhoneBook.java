@@ -23,4 +23,8 @@ public class PhoneBook {
         if (names.get(name) == null) return 0;
         return names.get(name);
     }
+
+    public boolean printAllNames(){
+        return false;
+    }
 }

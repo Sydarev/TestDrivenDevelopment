@@ -18,8 +18,7 @@ public class PhoneBookTest {
 
     @Test
     public void testFindByNumber() {
-        phoneBook.add(name1, number1);
-        phoneBook.add(name2, number2);
+        fillThePhoneBook();
         Assertions.assertEquals(phoneBook.findByNumber(number1), name1);
         Assertions.assertEquals(phoneBook.findByNumber(number2), name2);
         Assertions.assertEquals(phoneBook.findByNumber(0000), null);
@@ -27,10 +26,20 @@ public class PhoneBookTest {
 
     @Test
     public void testFindByName() {
-        phoneBook.add(name1, number1);
-        phoneBook.add(name2, number2);
+        fillThePhoneBook();
         Assertions.assertEquals(phoneBook.findByName(name1), number1);
         Assertions.assertEquals(phoneBook.findByName(name2), number2);
         Assertions.assertEquals(phoneBook.findByName("Valera"), 0);
+    }
+
+    @Test
+    public void testPrintAllNames() {
+        fillThePhoneBook();
+        Assertions.assertEquals(phoneBook.printAllNames(), true);
+    }
+
+    public void fillThePhoneBook() {
+        phoneBook.add(name1, number1);
+        phoneBook.add(name2, number2);
     }
 }
