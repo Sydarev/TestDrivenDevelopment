@@ -7,12 +7,17 @@ public class PhoneBookTest {
     String name2 = "Ivan";
     int number1 = 8903;
     int number2 = 9348;
+    PhoneBook phoneBook = new PhoneBook();
 
     @Test
     public void testAdd() {
-        PhoneBook phoneBook = new PhoneBook();
         Assertions.assertEquals(phoneBook.add(name1, number1), 1);
         Assertions.assertEquals(phoneBook.add(name1, number1), 1);
         Assertions.assertEquals(phoneBook.add(name2, number2), 2);
+    }
+    @Test
+    public void testFindByNumber(){
+        Assertions.assertEquals(phoneBook.findByNumber(number1), name1);
+        Assertions.assertEquals(phoneBook.findByNumber(number2), name2);
     }
 }
